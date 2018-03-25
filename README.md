@@ -1,5 +1,4 @@
-# WinBypass
-Windows UAC Bypass
+# Windows UAC Bypass | Privilege Escalation
 
 ## SluiHijackBypass
 **Slui File Handler Hijack LPE**
