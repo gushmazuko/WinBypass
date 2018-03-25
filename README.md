@@ -14,4 +14,4 @@ For use in Windows x64 payload should be also x64.
 
 
 ## Shell upgrade
-**To upgrade ```x86 meterpreter shell``` to ```x64 meterpreter shell```, use module ```post/windows/manage/priv_migrate```
+**To upgrade ```x86 meterpreter shell``` to ```x64 meterpreter shell```, use module ```post/windows/manage/priv_migrate```**
