@@ -13,6 +13,5 @@ For use in Windows x64 payload should be also x64.
 **EventVwrBypass.ps1**
 
 
-## How to upgrade ```x86 meterpreter shell``` to ```x64 meterpreter shell```
-
-Use module ```post/windows/manage/priv_migrate```
+## Shell upgrade
+**To upgrade ```x86 meterpreter shell``` to ```x64 meterpreter shell```, use module ```post/windows/manage/priv_migrate```
