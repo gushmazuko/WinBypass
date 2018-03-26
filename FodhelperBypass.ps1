@@ -48,5 +48,4 @@ function FodhelperBypass(){
 	#Remove registry structure
 	Start-Sleep 3
 	Remove-Item "HKCU:\Software\Classes\ms-settings\" -Recurse -Force
-	
 }
