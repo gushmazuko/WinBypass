@@ -1,7 +1,7 @@
 # Windows UAC Bypass | Privilege Escalation
 
 ## Slui File Handler Hijack LPE - Windows 8-10
-**EventVwrBypass.ps1**
+**SluiHijackBypass.ps1**
 
 
 ## UAC Bypass via FodHelper - Windows 10
