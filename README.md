@@ -3,7 +3,6 @@
 ## Slui File Handler Hijack LPE - Windows 8-10
 **EventVwrBypass.ps1**
 
-For use in Windows x64, payload should be also x64.
 
 ## UAC Bypass via FodHelper - Windows 10
 **FodhelperBypass.ps1**
