@@ -13,4 +13,4 @@
 
 
 ## Shell upgrade
-**To upgrade ```x86 meterpreter shell``` to ```x64 meterpreter shell```, use module ```post/windows/manage/priv_migrate```**
+**To upgrade ```x86 meterpreter shell``` to ```x64 meterpreter shell```, use module ```exploit/windows/local/payload_inject```**
