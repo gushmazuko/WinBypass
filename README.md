@@ -1,19 +1,19 @@
 # Windows UAC Bypass | Privilege Escalation
 
 ## Slui File Handler Hijack LPE - Windows 8-10
-SluiHijackBypass.ps1
+**SluiHijackBypass.ps1**
 
 
 ## UAC Bypass via FodHelper - Windows 10
-FodhelperBypass.ps1
+**FodhelperBypass.ps1**
 
 
 ## UAC Bypass via Event Viewer - Windows 7
-EventVwrBypass.ps1
+**EventVwrBypass.ps1**
 
 
 ## Metasploit-Framework Module
-bypassuac_sluihijack.rb
+**bypassuac_sluihijack.rb**
 
 copy to ```~/.msf4/modules/exploits/windows/local/```
 
