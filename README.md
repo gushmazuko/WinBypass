@@ -14,6 +14,7 @@ EventVwrBypass.ps1
 
 ## Metasploit-Framework Module
 bypassuac_sluihijack.rb
+
 copy to ```~/.msf4/modules/exploits/windows/local/```
 
 ## Shell upgrade
