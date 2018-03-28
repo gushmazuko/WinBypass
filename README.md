@@ -12,5 +12,10 @@ FodhelperBypass.ps1
 EventVwrBypass.ps1
 
 
+## Metasploit-Framework Module
+bypassuac_sluihijack.rb
+copy to ```~/.msf4/modules/exploits/windows/local/```
+
 ## Shell upgrade
 To upgrade ```x86 meterpreter shell``` to ```x64 meterpreter shell```, use module ```exploit/windows/local/payload_inject```
+
