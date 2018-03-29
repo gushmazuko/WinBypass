@@ -18,5 +18,5 @@
 copy to ```~/.msf4/modules/exploits/windows/local/```
 
 ## Shell upgrade
-To upgrade ```x86 meterpreter shell``` to ```x64 meterpreter shell```, use module ```exploit/windows/local/payload_inject```
+To upgrade ```x86 meterpreter shell``` to ```x64 meterpreter shell```, use module ```run post/windows/manage/priv_migrate```
 
