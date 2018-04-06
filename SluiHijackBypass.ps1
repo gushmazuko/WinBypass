@@ -18,7 +18,6 @@ function SluiHijackBypass(){
 
 		[Parameter(Mandatory=$True)]
 		[String]$http,
-		#[String]$arch = 64,
 		[ValidateSet(64,86)]
 		[int]$arch = 64
 	)
