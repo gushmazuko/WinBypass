@@ -6,7 +6,7 @@
 	File Name  : SluiHijackBypass.ps1
 	Author     : Gushmazuko
 .LINK
-	https://github.com/gushmazuko/tools/blob/master/SluiHijackBypass.ps1
+	https://github.com/gushmazuko/WinBypass/blob/master/SluiHijackBypass.ps1
 	Original source: https://bytecode77.com/hacking/exploits/uac-bypass/slui-file-handler-hijack-privilege-escalation
 .EXAMPLE
 	Load "cmd.exe" (By Default used 'arch 64'):
