@@ -15,8 +15,7 @@
 ## Metasploit-Framework Module
 **bypassuac_sluihijack.rb**
 
-~~copy to ```~/.msf4/modules/exploits/windows/local/```~~
-
+~~copy to ```~/.msf4/modules/exploits/windows/local/```~~  
 Merged to official repository
 
 ## Shell upgrade
